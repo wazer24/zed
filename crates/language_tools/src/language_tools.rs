@@ -2,6 +2,7 @@ mod highlights_tree_view;
 mod key_context_view;
 pub mod lsp_button;
 pub mod lsp_log_view;
+mod resource_monitor_view;
 mod syntax_tree_view;
 
 #[cfg(test)]
@@ -18,6 +19,7 @@ use workspace::{Item, ItemHandle, SplitDirection, Workspace};
 pub fn init(cx: &mut App) {
     highlights_tree_view::init(cx);
     lsp_log_view::init(false, cx);
+    resource_monitor_view::init(cx);
     syntax_tree_view::init(cx);
     key_context_view::init(cx);
 }
